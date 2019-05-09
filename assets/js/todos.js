@@ -17,6 +17,10 @@ $("input[type='text']").keypress(function(event){
         var todoText = $(this).val();
         $(this).val("");
         //create new li with grabbed text
-        $("ul").append("<li><span>X</span> " + todoText + "</li>");
+        $("ul").append("<li><span><i class='fas fa-trash'></i></span> " + todoText + "</li>");
     }
 })
+
+$("#toggle-form").click(function(){
+	$("input[type='text']").fadeToggle();
+});
